@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    
+     <!-- CRUD -->
+     <div class="container py-5">
+        <div class="w-75 mx-auto">
+            <div class="text-center">
+                <h2 class="text-capitalize">product management system</h2>
+            </div>
+            
+            <div class="form-group">
+                <label for="productName" class="fw-bold">product name</label>
+                <input type="text" id="productName" class="form-control mt-2">
+            </div>
+            <div class="form-group">
+                <label for="productprice" class="fw-bold">product price</label>
+                <input type="text" id="productprice" class="form-control mt-2">
+            </div>
+            <div class="form-group">
+                <label for="productcategory" class="fw-bold">product category</label>
+                <input type="text" id="productcategory" class="form-control mt-2">
+            </div>
+            <div class="form-group">
+                <label for="productdes" class="fw-bold">product descrition</label>
+                <textarea name="" id="productdes" class="form-control mt-2"></textarea>
+            </div>
+            <button id="addBtn" class="btn btn-primary mt-3 w-100 d-block fw-bold" onclick="addProduct()">Add product</button>
+            <button id="updateBtn" class="btn btn-warning mt-3 w-100 d-none" >update product</button>
+        </div>
+
+        <div class="w-75 mx-auto py-3">
+            <input type="text" oninput="searchProduct(this.value)" placeholder="Search..." class="form-control mx-auto my-3">
+            <table class="table text-center">
+                <thead>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Des</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableBody">
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/style.js"></script>
+</body>
+</html>
+
+
+<!-- <td><button onclick='deleteItem(${i});' class="btn btn-danger">delete</button></td> -->
